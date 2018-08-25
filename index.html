@@ -14,6 +14,64 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        .wrap {
+            max-width: 1280px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        nav,
+        header {
+            height: 360px;
+        }
+
+        nav {
+            float: left;
+            width: 300px;
+            background-color: beige;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            font-size: 22px;
+            font-family: arial;
+            line-height: 72px;
+            color: black;
+            padding: 0 5px 0 30px;
+        }
+
+        nav i {
+            width: 50px;
+            border-right: 2px solid black;
+            margin-right: 30px;
+        }
+
+        header {
+            float: left;
+            width: calc(100% - 300px);
+            background-image: url(img/pianino.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-family: arial;
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -23,9 +81,7 @@
             <ul>
                 <li>
                     <a href="#">
-                        <i class="far fa-play-circle"></i>
-
-                        start</a>
+                        <i class="far fa-play-circle"></i>start</a>
                 </li>
                 <li>
                     <a href="#">
