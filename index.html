@@ -21,12 +21,12 @@
             overflow: hidden;
         }
 
-        nav,
+        nav.desktop,
         header {
             height: 360px;
         }
 
-        nav {
+        nav.desktop {
             float: left;
             width: 300px;
         }
@@ -35,7 +35,7 @@
             list-style: none;
         }
 
-        nav a {
+        nav.desktop a {
             display: block;
             text-decoration: none;
             font-size: 22px;
@@ -45,18 +45,18 @@
             padding: 0 5px 0 30px;
         }
 
-        nav i {
+        nav.desktop i {
             width: 50px;
             border-right: 2px solid black;
             margin-right: 30px;
             transition: .3s;
         }
 
-        nav a:hover i {
+        nav.desktop a:hover i {
             margin-right: 50px;
         }
 
-        nav a:hover {
+        nav.desktop a:hover {
             font-size: 30px;
             box-shadow: 0 0 0 5px black, 0 0 0 10px rgb(16, 238, 16);
         }
@@ -81,12 +81,62 @@
             padding: 15px 0;
             text-align: center;
         }
+
+        nav.mobile {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            nav.desktop {
+                display: none;
+            }
+
+            nav.mobile {
+                position: fixed;
+                width: 72px;
+                height: 100%;
+                display: block;
+                background-color: #333;
+            }
+
+            nav.mobile:hover {
+                background-color: rgb(226, 209, 132);
+            }
+
+            nav.mobile:hover a {
+                color: black;
+            }
+
+            nav.mobile a {
+                display: block;
+                line-height: 10vh;
+                color: white;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            nav.mobile a:hover {
+                color: greenyellow;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            section {
+                margin-top: -50px;
+            }
+
+            section h1 {
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="wrap">
-        <nav>
+        <nav class="desktop">
             <ul>
                 <li>
                     <a href="#">
@@ -107,6 +157,35 @@
                 <li>
                     <a href="#">
                         <i class="far fa-envelope"></i>kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="far fa-play-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-calendar-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-envelope"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
